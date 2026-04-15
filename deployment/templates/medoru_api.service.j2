@@ -1,0 +1,16 @@
+[Unit]
+Description=Medoru API
+After=network.target
+
+[Service]
+Type=simple
+User={{ app_user }}
+Group={{ app_group }}
+WorkingDirectory={{ app_home }}/current
+EnvironmentFile={{ env_file }}
+ExecStart={{ app_home }}/current/.venv/bin/uvicorn app.main:app --host {{ app_host }} --port {{ app_port }}
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

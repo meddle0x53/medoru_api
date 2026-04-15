@@ -1,0 +1,12 @@
+app_name: medoru_api
+app_user: medoru
+app_group: medoru
+app_home: /var/opt/medoru_api
+service_name: medoru_api
+app_host: 127.0.0.1
+app_port: 5000
+
+git_repo: "https://github.com/meddle0x53/medoru_api"
+git_branch: "master"
+
+env_file: /etc/medoru_api/medoru_api.env
